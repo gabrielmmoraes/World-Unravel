@@ -1,0 +1,11 @@
+D:\repositorios\World-Unravel\Backend\bin\Debug\netcoreapp2.1\Backend.deps.json
+D:\repositorios\World-Unravel\Backend\bin\Debug\netcoreapp2.1\Backend.runtimeconfig.json
+D:\repositorios\World-Unravel\Backend\bin\Debug\netcoreapp2.1\Backend.runtimeconfig.dev.json
+D:\repositorios\World-Unravel\Backend\bin\Debug\netcoreapp2.1\Backend.dll
+D:\repositorios\World-Unravel\Backend\bin\Debug\netcoreapp2.1\Backend.pdb
+D:\repositorios\World-Unravel\Backend\obj\Debug\netcoreapp2.1\Backend.csproj.CoreCompileInputs.cache
+D:\repositorios\World-Unravel\Backend\obj\Debug\netcoreapp2.1\Backend.AssemblyInfoInputs.cache
+D:\repositorios\World-Unravel\Backend\obj\Debug\netcoreapp2.1\Backend.AssemblyInfo.cs
+D:\repositorios\World-Unravel\Backend\obj\Debug\netcoreapp2.1\Backend.dll
+D:\repositorios\World-Unravel\Backend\obj\Debug\netcoreapp2.1\Backend.pdb
+D:\repositorios\World-Unravel\Backend\obj\Debug\netcoreapp2.1\Backend.csprojAssemblyReference.cache

@@ -16,7 +16,7 @@ namespace Backend {
                 type Query {
                     hello: String,
                     users: [User],
-                    user(id: ID): [User]
+                    user(id: ID): User
                 }
                 ", _ => { _.Types.Include<Query>(); }
             );

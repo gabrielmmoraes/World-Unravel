@@ -6,9 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MapaComponent } from './mapa/mapa.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PlacarLideresComponent } from './placar-lideres/placar-lideres.component';
 
 @NgModule({
-  declarations: [AppComponent, MapaComponent, NavbarComponent],
+  declarations: [AppComponent, MapaComponent, NavbarComponent, PlacarLideresComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

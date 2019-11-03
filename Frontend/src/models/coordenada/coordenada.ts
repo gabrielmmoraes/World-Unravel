@@ -1,4 +1,4 @@
-export class Coordenada {
-  public latitude: string;
-  public longitude: string;
+export interface Coordenada {
+  latitude: number;
+  longitude: number;
 }

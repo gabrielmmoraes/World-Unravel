@@ -24,8 +24,6 @@ namespace AspServer {
                   }
                 );
 
-                context.SaveChanges();
-
                 context.Coordinates.AddRange(
                   new Coordinate {
                       Id = 1,
@@ -40,6 +38,8 @@ namespace AspServer {
                       Longitude = -77.0384M
                   }
                 );
+
+                context.SaveChanges();
             }
             host.Run();
         }

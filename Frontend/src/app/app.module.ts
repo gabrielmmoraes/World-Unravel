@@ -4,9 +4,11 @@ import { AgmCoreModule } from '@agm/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MapaComponent } from './mapa/mapa.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, MapaComponent, NavbarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

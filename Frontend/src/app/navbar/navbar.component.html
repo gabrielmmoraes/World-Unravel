@@ -1,8 +1,17 @@
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+  <!-- <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a> -->
+  <div id="userContainer" class="row">
+    <img
+      id="avatar"
+      class="col-sm-4 avatar"
+      src="../../assets/images/img_avatar.png"
+      alt="Avatar"
+    />
+    <div id="userDetais" class="col-sm-8">Seja bem vinda, Gabriela!</div>
+  </div>
+  <a routerLink="/">Home</a>
+  <a routerLink="/leaderboards">Placar de líderes</a>
+  <a routerLink="/grupo">Grupo</a>
+  <a routerLink="/conta">Conta</a>
 </div>
-<span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776;</span>
+<!-- <span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776;</span> -->

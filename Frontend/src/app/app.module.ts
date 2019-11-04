@@ -10,11 +10,13 @@ import { PlacarLideresComponent } from './placar-lideres/placar-lideres.componen
 import { PontuacaoComponent } from './pontuacao/pontuacao.component';
 import { GruposComponent } from './grupos/grupos.component';
 import { BuscaComponent } from './busca/busca.component';
+import { FilterPipe } from './busca/filter.pipe';
 // import { ContaComponent } from './conta/conta.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    FilterPipe,
     MapaComponent,
     NavbarComponent,
     PlacarLideresComponent,

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Mapa } from '../../models/mapa/mapa';
-import { Pontuacao } from 'src/models/pontuacao/pontuacao';
-import { Dificuldade } from 'src/models/dificuldade/dificuldade';
+import { mockUsuarios } from 'src/mocks/usuario-mock';
+import { Usuario } from 'src/models/usuario/usuario';
 
 @Component({
   selector: 'app-mapa',
@@ -10,18 +10,17 @@ import { Dificuldade } from 'src/models/dificuldade/dificuldade';
 })
 export class MapaComponent implements OnInit {
   private googleMaps: Mapa;
+  private usuario: Usuario;
 
   constructor() {}
 
   ngOnInit() {
-    const arrayCoordenadas = [{ latitude: 51.678418, longitude: 7.809007 }];
-    this.googleMaps = new Mapa(arrayCoordenadas);
-    this.googleMaps.renderizarNuvem(arrayCoordenadas);
-    const a = new Pontuacao([
-      { latitude: 52.2296756, longitude: 21.0122287 },
-      { latitude: 52.406374, longitude: 16.9251681 },
-      { latitude: 52.2296756, longitude: 21.0122287 }
-    ]);
-    console.log(a.calcularPontuacao(Dificuldade.FACIL));
+    this.usuario = mockUsuarios[0];
+    this.googleMaps = new Mapa(this.usuario.coordenadas);
+    this.googleMaps.renderizarNuvem();
+  }
+
+  public mostrarCoordenada(event: Event) {
+    console.log(event);
   }
 }

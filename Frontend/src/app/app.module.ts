@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PlacarLideresComponent } from './placar-lideres/placar-lideres.component';
 import { PontuacaoComponent } from './pontuacao/pontuacao.component';
 import { GruposComponent } from './grupos/grupos.component';
+import { BuscaComponent } from './busca/busca.component';
 // import { ContaComponent } from './conta/conta.component';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { GruposComponent } from './grupos/grupos.component';
     PlacarLideresComponent,
     PontuacaoComponent,
     GruposComponent
+    BuscaComponent
     // ContaComponent
   ],
   imports: [

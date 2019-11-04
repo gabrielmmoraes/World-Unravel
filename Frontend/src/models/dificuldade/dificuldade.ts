@@ -1,3 +1,6 @@
+/**
+ * Define peso da pontuação
+ */
 export enum Dificuldade {
   FACIL = 1,
   MEDIO = 0.5,

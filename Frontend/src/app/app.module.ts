@@ -7,9 +7,12 @@ import { AppComponent } from './app.component';
 import { MapaComponent } from './mapa/mapa.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PlacarLideresComponent } from './placar-lideres/placar-lideres.component';
+import { PontuacaoComponent } from './pontuacao/pontuacao.component';
+import { GruposComponent } from './grupos/grupos.component';
+import { ContaComponent } from './conta/conta.component';
 
 @NgModule({
-  declarations: [AppComponent, MapaComponent, NavbarComponent, PlacarLideresComponent],
+  declarations: [AppComponent, MapaComponent, NavbarComponent, PlacarLideresComponent, PontuacaoComponent, GruposComponent, ContaComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

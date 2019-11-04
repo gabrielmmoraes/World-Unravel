@@ -4,10 +4,12 @@ body {
   margin: 0;
   height: 100%;
   font-family: 'Lato', sans-serif;
+  overflow-y: hidden;
 }
 
 .routerContainer {
   padding-left: 350px;
+  height: 100%;
 }
 
 .routerTitle {

@@ -1,0 +1,21 @@
+<div class="routerContainer">
+  <p class="routerTitle">Grupos</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome do grupo</th>
+        <th scope="col">Pontuação</th>
+        <th scope="col">Membros</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let grupo of grupos; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ grupo.nome }}</td>
+        <td>{{ grupo.pontuacao }}</td>
+        <td>{{ grupo.integrantes }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

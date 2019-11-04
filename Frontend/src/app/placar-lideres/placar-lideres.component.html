@@ -1,0 +1,42 @@
+<div class="routerContainer">
+  <p class="routerTitle">Placar de Líderes</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome de Usuário</th>
+        <th scope="col">Pontuação</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuarios; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ usuario.nome }}</td>
+        <td>{{ usuario.pontuacao }}</td>
+        <td>
+          <div class="btn-group" role="group">
+            <button
+              class="btn btn-info btn-xs"
+              title="Adicionar {{ usuario.nome }}"
+            >
+              <i class="fa fa-user-plus"></i>
+            </button>
+            <button
+              class="btn btn-warning btn-xs"
+              title="Seguir {{ usuario.nome }}"
+            >
+              <i class="fa fa-rss"></i>
+            </button>
+            <button
+              class="btn btn-danger btn-xs"
+              title="Bloquear {{ usuario.nome }}"
+            >
+              <i class="fa fa-ban"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

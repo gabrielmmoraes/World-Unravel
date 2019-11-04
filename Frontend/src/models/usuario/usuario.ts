@@ -4,26 +4,26 @@ import { Pontuacao } from '../pontuacao/pontuacao';
 
 export class Usuario {
   public id: number;
-  public nomeDeUsuario: string;
+  public nome: string;
   public pontuacao: number;
   public dificuldade: Dificuldade;
   public coordenadas: Array<Coordenada>;
 
   constructor({
     id,
-    nomeDeUsuario,
+    nome,
     dificuldade,
     coordenadas,
     pontuacao
   }: {
     id: number;
-    nomeDeUsuario: string;
+    nome: string;
     dificuldade: Dificuldade;
     coordenadas?: Array<Coordenada>;
     pontuacao?: number;
   }) {
     this.id = id;
-    this.nomeDeUsuario = nomeDeUsuario;
+    this.nome = nome;
     this.dificuldade = dificuldade;
     this.coordenadas = coordenadas ? coordenadas : [];
     this.pontuacao = pontuacao

@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { MapaComponent } from './mapa/mapa.component';
 import { PlacarLideresComponent } from './placar-lideres/placar-lideres.component';
 import { GruposComponent } from './grupos/grupos.component';
-import { ContaComponent } from './conta/conta.component';
+// import { ContaComponent } from './conta/conta.component';
 
 const routes: Routes = [
   {
@@ -17,8 +17,8 @@ const routes: Routes = [
   {
     path: 'grupos',
     component: GruposComponent
-  },
-  { path: 'conta', component: ContaComponent }
+  }
+  /*   { path: 'conta', component: ContaComponent } */
 ];
 
 @NgModule({

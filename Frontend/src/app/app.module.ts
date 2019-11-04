@@ -10,6 +10,7 @@ import { PlacarLideresComponent } from './placar-lideres/placar-lideres.componen
 import { PontuacaoComponent } from './pontuacao/pontuacao.component';
 import { GruposComponent } from './grupos/grupos.component';
 import { BuscaComponent } from './busca/busca.component';
+import { FormsModule } from "@angular/forms";
 import { FilterPipe } from './busca/filter.pipe';
 // import { ContaComponent } from './conta/conta.component';
 
@@ -21,11 +22,12 @@ import { FilterPipe } from './busca/filter.pipe';
     NavbarComponent,
     PlacarLideresComponent,
     PontuacaoComponent,
-    GruposComponent
+    GruposComponent,
     BuscaComponent
     // ContaComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({

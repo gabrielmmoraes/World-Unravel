@@ -1,0 +1,39 @@
+<div class="routerContainer">
+  <p class="routerTitle display-2">Buscar Usuários</p>
+  <div class="md-form mt-0">
+    <input class="form-control busca-nome" type="text" placeholder="Search" aria-label="Search" [(ngModel)]="usuarioBusca">
+  </div>
+  <br>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Nome de Usuário</th>
+      <th scope="col">Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let usuario of usuarios | filter : usuarioBusca">
+      <td [align]="center">{{ usuario.nome }}</td>
+      <td>
+        <div class="btn-group" role="group">
+          <button
+            class="btn btn-info btn-xs"
+            title="Adicionar {{ usuario.nome }}">
+            <i class="fa fa-user-plus"></i>
+          </button>
+          <button
+            class="btn btn-warning btn-xs"
+            title="Seguir {{ usuario.nome }}">
+            <i class="fa fa-rss"></i>
+          </button>
+          <button
+            class="btn btn-danger btn-xs"
+            title="Bloquear {{ usuario.nome }}">
+            <i class="fa fa-ban"></i>
+          </button>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

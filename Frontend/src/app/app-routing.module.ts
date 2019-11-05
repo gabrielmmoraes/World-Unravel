@@ -20,14 +20,13 @@ const routes: Routes = [
     component: GruposComponent
   },
   {
-    path: 'buscar-usuarios',
+    path: 'busca',
     component: BuscaComponent
   }/*,
   {
     path: 'conta',
     component: ContaComponent
-  }
-  */
+  }*/
 ];
 
 @NgModule({

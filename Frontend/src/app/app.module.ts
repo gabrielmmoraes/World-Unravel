@@ -23,8 +23,8 @@ import { FilterPipe } from './busca/filter.pipe';
     PlacarLideresComponent,
     PontuacaoComponent,
     GruposComponent,
-    BuscaComponent
-    // ContaComponent
+    BuscaComponent,
+    //ContaComponent
   ],
   imports: [
     FormsModule,

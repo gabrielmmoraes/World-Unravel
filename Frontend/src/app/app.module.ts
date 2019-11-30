@@ -9,19 +9,25 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PlacarLideresComponent } from './placar-lideres/placar-lideres.component';
 import { PontuacaoComponent } from './pontuacao/pontuacao.component';
 import { GruposComponent } from './grupos/grupos.component';
+import { BuscaComponent } from './busca/busca.component';
+import { FormsModule } from "@angular/forms";
+import { FilterPipe } from './busca/filter.pipe';
 // import { ContaComponent } from './conta/conta.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    FilterPipe,
     MapaComponent,
     NavbarComponent,
     PlacarLideresComponent,
     PontuacaoComponent,
-    GruposComponent
-    // ContaComponent
+    GruposComponent,
+    BuscaComponent,
+    //ContaComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({

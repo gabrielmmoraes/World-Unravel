@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using AspServer.Database;
+﻿using AspServer.Database;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 
 namespace AspServer {
     public class Program {
@@ -21,6 +14,7 @@ namespace AspServer {
                   new User {
                       Id = 1,
                       Name = "Ary do Dota",
+                      Group = new Group { Id = 1, Name = "Party 1" }
                   }
                 );
 

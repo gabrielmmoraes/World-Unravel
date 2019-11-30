@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using AspServer.Database;
 using GraphQL.Types;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +15,7 @@ namespace AspServer.GraphQL {
                   var user = db
               .Users
               .Include(a => a.Coordinates)
+              .Include(a => a.Group)
               .FirstOrDefault(i => i.Id == id);
                   return user;
               });
@@ -25,7 +23,7 @@ namespace AspServer.GraphQL {
             Field<ListGraphType<UserType>>(
               "Users",
               resolve: context => {
-                  var users = db.Users.Include(a => a.Coordinates);
+                  var users = db.Users.Include(a => a.Coordinates).Include(a => a.Group);
                   return users;
               });
         }

@@ -5,5 +5,6 @@ namespace AspServer {
         public int Id { get; set; }
         public string Name { get; set; }
         public List<Coordinate> Coordinates { get; set; }
+        public Group Group { get; set; }
     }
 }

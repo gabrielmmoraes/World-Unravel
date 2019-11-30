@@ -7,7 +7,7 @@ namespace AspServer.GraphQL {
     public class UserQuery : ObjectGraphType {
         public UserQuery(ApplicationDbContext db) {
             Field<UserType>(
-              "User",
+              "Usuario",
               arguments: new QueryArguments(
                 new QueryArgument<IdGraphType> { Name = "id", Description = "The ID of the User." }),
               resolve: context => {
@@ -21,7 +21,7 @@ namespace AspServer.GraphQL {
               });
 
             Field<ListGraphType<UserType>>(
-              "Users",
+              "Usuarios",
               resolve: context => {
                   var users = db.Users.Include(a => a.Coordinates).Include(a => a.Group);
                   return users;

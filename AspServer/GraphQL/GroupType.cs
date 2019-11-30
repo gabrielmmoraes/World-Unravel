@@ -6,7 +6,7 @@ namespace AspServer.GraphQL {
             Name = "Group";
 
             Field(x => x.Id, type: typeof(IdGraphType)).Description("The id of the group");
-            Field(x => x.Name).Description("The name of the group");
+            Field("nomeDoGrupo", x => x.Name).Description("The name of the group");
         }
     }
 }

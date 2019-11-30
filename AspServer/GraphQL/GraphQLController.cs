@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using AspServer.Database;
 using GraphQL;
 using GraphQL.Types;
@@ -22,8 +19,7 @@ namespace AspServer.GraphQL {
                 Query = new UserQuery(_db)
             };
 
-            var result = await new DocumentExecuter().ExecuteAsync(_ =>
-            {
+            var result = await new DocumentExecuter().ExecuteAsync(_ => {
                 _.Schema = schema;
                 _.Query = query.Query;
                 _.OperationName = query.OperationName;

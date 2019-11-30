@@ -51,13 +51,15 @@ namespace AspServer {
                         Id = 1,
                         Name = "Ary do Dota",
                         Group = group1,
-                        Coordinates = coordenates1
+                        Coordinates = coordenates1,
+                        Difficulty = Difficulty.Hard
                     },
                     new User {
                         Id = 2,
                         Name = "Ana",
                         Group = group1,
-                        Coordinates = coordenates2
+                        Coordinates = coordenates2,
+                        Difficulty = Difficulty.Medium
                     }
                 );
 

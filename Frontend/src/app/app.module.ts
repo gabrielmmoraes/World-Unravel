@@ -1,17 +1,18 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { AgmCoreModule } from '@agm/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { AgmCoreModule } from "@agm/core";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { MapaComponent } from './mapa/mapa.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { PlacarLideresComponent } from './placar-lideres/placar-lideres.component';
-import { PontuacaoComponent } from './pontuacao/pontuacao.component';
-import { GruposComponent } from './grupos/grupos.component';
-import { BuscaComponent } from './busca/busca.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { MapaComponent } from "./mapa/mapa.component";
+import { NavbarComponent } from "./navbar/navbar.component";
+import { PlacarLideresComponent } from "./placar-lideres/placar-lideres.component";
+import { PontuacaoComponent } from "./pontuacao/pontuacao.component";
+import { GruposComponent } from "./grupos/grupos.component";
+import { BuscaComponent } from "./busca/busca.component";
 import { FormsModule } from "@angular/forms";
-import { FilterPipe } from './busca/filter.pipe';
+import { FilterPipe } from "./busca/filter.pipe";
+import { HttpClientModule } from "@angular/common/http";
 // import { ContaComponent } from './conta/conta.component';
 
 @NgModule({
@@ -23,7 +24,7 @@ import { FilterPipe } from './busca/filter.pipe';
     PlacarLideresComponent,
     PontuacaoComponent,
     GruposComponent,
-    BuscaComponent,
+    BuscaComponent
     //ContaComponent
   ],
   imports: [
@@ -31,8 +32,9 @@ import { FilterPipe } from './busca/filter.pipe';
     BrowserModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCaGx_lFRzU94_bsVn9eHIZYDAfhckJKJw'
-    })
+      apiKey: "AIzaSyCaGx_lFRzU94_bsVn9eHIZYDAfhckJKJw"
+    }),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

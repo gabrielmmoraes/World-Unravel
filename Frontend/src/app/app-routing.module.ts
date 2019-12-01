@@ -1,28 +1,30 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { MapaComponent } from './mapa/mapa.component';
-import { PlacarLideresComponent } from './placar-lideres/placar-lideres.component';
-import { GruposComponent } from './grupos/grupos.component';
-import { BuscaComponent } from './busca/busca.component';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
+import { MapaComponent } from "./mapa/mapa.component";
+import { PlacarLideresComponent } from "./placar-lideres/placar-lideres.component";
+import { GruposComponent } from "./grupos/grupos.component";
+import { BuscaComponent } from "./busca/busca.component";
+import { DataResolverMapa } from "src/data-resolvers/data-resolver-mapa";
 // import { ContaComponent } from './conta/conta.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: MapaComponent
+    path: "",
+    component: MapaComponent,
+    resolve: { usuarios: DataResolverMapa }
   },
   {
-    path: 'leaderboards',
+    path: "leaderboards",
     component: PlacarLideresComponent
   },
   {
-    path: 'grupos',
+    path: "grupos",
     component: GruposComponent
   },
   {
-    path: 'busca',
+    path: "busca",
     component: BuscaComponent
-  }/*,
+  } /*,
   {
     path: 'conta',
     component: ContaComponent

@@ -28,9 +28,26 @@ namespace AspServer {
 
                 group1.Users = new List<User> { userAry, userAna };
 
-                context.Users.AddRange(userAry, userAna);
+                var group2 = new Group { Id = 2, Name = "Party 2" };
+                var coordenates3 = new List<Coordinate>
+                {
+                    new Coordinate {Id = 5, UserId = 3, Latitude = 38.8953M, Longitude = -77.0364M},
+                    new Coordinate {Id = 6,UserId = 3,Latitude = 38.8953M,Longitude = -77.0384M}
+                };
+                var coordenates4 = new List<Coordinate>
+                {
+                    new Coordinate{Id = 7,UserId = 4,Latitude = 38.8957M,Longitude = -77.0365M},
+                    new Coordinate{Id = 8,UserId = 4,Latitude = 38.8957M,Longitude = -77.0385M}
+                };
 
-                context.Groups.Add(group1);
+                var userSantao = new User { Id = 3, Name = "Santão", Group = group2, Coordinates = coordenates3, Difficulty = Difficulty.DIFICIL };
+                var userMengao = new User { Id = 4, Name = "Mengão", Group = group2, Coordinates = coordenates4, Difficulty = Difficulty.MEDIO };
+
+                group2.Users = new List<User> { userSantao, userMengao };
+
+                context.Users.AddRange(userAry, userAna, userSantao, userMengao);
+
+                context.Groups.AddRange(group1, group2);
 
                 context.SaveChanges();
             }

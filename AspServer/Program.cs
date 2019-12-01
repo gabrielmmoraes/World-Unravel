@@ -4,11 +4,15 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AspServer {
-    public class Program {
-        public static void Main(string[] args) {
+namespace AspServer
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
             IWebHost host = CreateWebHostBuilder(args).Build();
-            using (IServiceScope scope = host.Services.CreateScope()) {
+            using (IServiceScope scope = host.Services.CreateScope())
+            {
                 ApplicationDbContext context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
 
                 var group1 = new Group { Id = 1, Name = "Party 1" };
@@ -47,19 +51,21 @@ namespace AspServer {
                     }
                 };
                 context.Users.AddRange(
-                    new User {
+                    new User
+                    {
                         Id = 1,
                         Name = "Ary do Dota",
                         Group = group1,
                         Coordinates = coordenates1,
-                        Difficulty = Difficulty.Hard
+                        Difficulty = Difficulty.DIFICIL
                     },
-                    new User {
+                    new User
+                    {
                         Id = 2,
                         Name = "Ana",
                         Group = group1,
                         Coordinates = coordenates2,
-                        Difficulty = Difficulty.Medium
+                        Difficulty = Difficulty.MEDIO
                     }
                 );
 

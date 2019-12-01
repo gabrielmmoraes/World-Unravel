@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 
-namespace AspServer {
-    public class User {
+namespace AspServer
+{
+    public class User
+    {
         public int Id { get; set; }
         public string Name { get; set; }
         public List<Coordinate> Coordinates { get; set; }
@@ -9,10 +11,11 @@ namespace AspServer {
         public Difficulty Difficulty { get; set; }
     }
 
-    public enum Difficulty {
+    public enum Difficulty
+    {
         Unset,
-        Easy,
-        Medium,
-        Hard
+        FACIL,
+        MEDIO,
+        DIFICIL
     }
 }

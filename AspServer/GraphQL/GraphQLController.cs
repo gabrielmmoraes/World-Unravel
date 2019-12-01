@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Linq;
+using System.Threading.Tasks;
 using AspServer.Database;
 using GraphQL;
 using GraphQL.Types;
@@ -27,6 +29,12 @@ namespace AspServer.GraphQL {
             });
 
             if (result.Errors?.Count > 0) {
+                result.Errors.ToList().ForEach(i => {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Error.Write("Error: ");
+                    Console.ResetColor();
+                    Console.Error.WriteLine(i);
+                });
                 return BadRequest();
             }
 

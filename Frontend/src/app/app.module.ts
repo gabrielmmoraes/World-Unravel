@@ -1,6 +1,7 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
-import { AgmCoreModule } from "@agm/core";
+/// <reference types="@types/googlemaps" />
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -32,7 +33,8 @@ import { HttpClientModule } from "@angular/common/http";
     BrowserModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
-      apiKey: "AIzaSyCaGx_lFRzU94_bsVn9eHIZYDAfhckJKJw"
+      apiKey: 'AIzaSyCoF7PcqyVdLNE1aVWeZ6M-6Mdyoo4IKzA',
+      libraries: ['drawing']
     }),
     HttpClientModule
   ],

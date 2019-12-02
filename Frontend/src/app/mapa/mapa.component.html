@@ -1,14 +1,12 @@
 <div style="height: 100%;">
+
   <app-pontuacao [pontuacao]="usuario.pontuacao"></app-pontuacao>
-  <agm-map
-    [latitude]="googleMaps.coordenadaFocoMapa.latitude"
-    [longitude]="googleMaps.coordenadaFocoMapa.longitude"
-    [zoom]="15"
-    (mapClick)="mostrarCoordenada($event)"
-    ><agm-marker
-      *ngFor="let coordenada of googleMaps.coordenadasUsuario"
-      [latitude]="coordenada.latitude"
-      [longitude]="coordenada.longitude"
-    ></agm-marker>
+  <agm-map [latitude]="googleMaps.coordenadaFocoMapa.latitude" [styles]="styles"
+    [longitude]="googleMaps.coordenadaFocoMapa.longitude" [zoom]="15"
+    (mapClick)="mostrarCoordenada($event)">
+
+    <agm-polygon [paths]="explored" strokeOpacity="0.0"
+      fillColor="#222222" fillOpacity="0.3"></agm-polygon>
+
   </agm-map>
 </div>

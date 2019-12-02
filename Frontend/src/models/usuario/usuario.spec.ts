@@ -6,3 +6,4 @@ describe("Usuario", () => {
     expect(new Usuario(mockUsuarios[0])).toBeTruthy();
   });
 });
+>>>>>>> dev

@@ -4,26 +4,30 @@ import { MapaComponent } from "./mapa/mapa.component";
 import { PlacarLideresComponent } from "./placar-lideres/placar-lideres.component";
 import { GruposComponent } from "./grupos/grupos.component";
 import { BuscaComponent } from "./busca/busca.component";
-import { DataResolverMapa } from "src/data-resolvers/data-resolver-mapa";
+import { DataResolverUsuarios } from "src/data-resolvers/data-resolver-usuarios";
+import { DataResolverGrupos } from "src/data-resolvers/data-resolver-grupos";
 // import { ContaComponent } from './conta/conta.component';
 
 const routes: Routes = [
   {
     path: "",
     component: MapaComponent,
-    resolve: { usuarios: DataResolverMapa }
+    resolve: { usuarios: DataResolverUsuarios }
   },
   {
     path: "leaderboards",
-    component: PlacarLideresComponent
+    component: PlacarLideresComponent,
+    resolve: { usuarios: DataResolverUsuarios }
   },
   {
     path: "grupos",
-    component: GruposComponent
+    component: GruposComponent,
+    resolve: { usuarios: DataResolverUsuarios, grupos: DataResolverGrupos }
   },
   {
     path: "busca",
-    component: BuscaComponent
+    component: BuscaComponent,
+    resolve: { usuarios: DataResolverUsuarios }
   } /*,
   {
     path: 'conta',

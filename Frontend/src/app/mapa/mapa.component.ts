@@ -5,6 +5,7 @@ import { Usuario } from "src/models/usuario/usuario";
 import { AppService } from "../app.service";
 import { Dificuldade } from "src/models/dificuldade/dificuldade";
 import { ActivatedRoute } from "@angular/router";
+import { MapsAPILoader } from "@agm/core";
 
 @Component({
   selector: "app-mapa",
@@ -12,8 +13,8 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ["./mapa.component.css"]
 })
 export class MapaComponent implements OnInit {
-  private googleMaps: Mapa;
-  private usuario: Usuario;
+  public googleMaps: Mapa;
+  public usuario: Usuario;
 
   constructor(private route: ActivatedRoute) {}
 

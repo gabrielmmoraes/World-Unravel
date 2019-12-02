@@ -49,4 +49,30 @@ export class AppService {
       options
     );
   }
+
+  public getGrupos(): Observable<any> {
+    const headers = new HttpHeaders({
+      "Content-Type": "application/json; charset=utf-8"
+    });
+
+    const query = `{
+        grupos {
+            id
+            nomeDoGrupo
+            usuarios {
+                id
+            }
+        }
+    }`;
+
+    const body = this._graphQLQueryToPOSTJson({ query });
+
+    const options = { headers };
+
+    return this.http.post<HttpResponse<any>>(
+      "http://localhost:5000/api",
+      body,
+      options
+    );
+  }
 }

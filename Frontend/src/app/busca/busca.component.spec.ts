@@ -1,16 +1,19 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { BuscaComponent } from './busca.component';
+import { BuscaComponent } from "./busca.component";
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { RouterTestingModule } from "@angular/router/testing";
+import { FilterPipe } from "./filter.pipe";
 
-describe('BuscaComponent', () => {
+describe("BuscaComponent", () => {
   let component: BuscaComponent;
   let fixture: ComponentFixture<BuscaComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BuscaComponent ]
-    })
-    .compileComponents();
+      declarations: [BuscaComponent, FilterPipe],
+      imports: [RouterTestingModule, FormsModule, ReactiveFormsModule]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +22,7 @@ describe('BuscaComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

@@ -1,22 +1,15 @@
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import {
-  Resolve,
-  ActivatedRouteSnapshot,
-  RouterStateSnapshot
-} from "@angular/router";
+import { Resolve } from "@angular/router";
 import { AppService } from "src/app/app.service";
 
 @Injectable({
   providedIn: "root"
 })
-export class DataResolverMapa implements Resolve<any> {
+export class DataResolverUsuarios implements Resolve<any> {
   constructor(private services: AppService) {}
 
-  resolve(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): Observable<any> {
+  resolve(): Observable<any> {
     return this.services.getUsuarios();
   }
 }

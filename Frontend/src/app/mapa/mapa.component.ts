@@ -45,7 +45,7 @@ export class MapaComponent implements OnInit {
 
     this.fog = [outerbounds];
     for (let coordenada of this.usuario.coordenadas){
-      this.fog.push(this.drawCircle(coordenada, 1, -1));
+      this.fog.push(this.drawCircle(coordenada, 0.1, -1));
     }
 
     this.explored = this.fog.slice(1);
@@ -94,11 +94,9 @@ export class MapaComponent implements OnInit {
       coordenadas,
       dificuldade: (Dificuldade[dificuldade] as unknown) as Dificuldade
     });
+    this.initialize();
     this.googleMaps = new Mapa(this.usuario.coordenadas);
     this.googleMaps.renderizarNuvem();
-
-    this.area = google.maps.geometry.spherical.computeArea(this.explored);
-    console.log(this.area);
   }
 
   public mostrarCoordenada(event: Event) {

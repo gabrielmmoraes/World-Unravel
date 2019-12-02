@@ -5,6 +5,11 @@
     [longitude]="googleMaps.coordenadaFocoMapa.longitude" [zoom]="15"
     (mapClick)="mostrarCoordenada($event)">
 
+    <agm-marker
+      *ngFor="let coordenada of googleMaps.coordenadasUsuario"
+      [latitude]="coordenada.latitude"
+      [longitude]="coordenada.longitude">
+      </agm-marker>
     <agm-polygon [paths]="explored" strokeOpacity="0.0"
       fillColor="#222222" fillOpacity="0.3"></agm-polygon>
 

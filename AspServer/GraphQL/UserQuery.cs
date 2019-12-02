@@ -21,11 +21,17 @@ namespace AspServer.GraphQL {
               });
 
             Field<ListGraphType<UserType>>(
-              "Usuarios",
-              resolve: context => {
-                  var users = db.Users.Include(a => a.Coordinates).Include(a => a.Group);
-                  return users;
-              });
+                "Usuarios",
+                resolve: context => {
+                    var users = db.Users.Include(a => a.Coordinates).Include(a => a.Group);
+                    return users;
+                });
+
+            Field<ListGraphType<GroupType>>(
+                "Grupos",
+                resolve: context => {
+                    return db.Groups.Include(a => a.Users).ThenInclude(c => c.Coordinates);
+                });
         }
     }
 }

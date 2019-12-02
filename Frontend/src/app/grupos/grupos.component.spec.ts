@@ -1,16 +1,30 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { GruposComponent } from './grupos.component';
+import { GruposComponent } from "./grupos.component";
+import { ActivatedRoute } from "@angular/router";
 
-describe('GruposComponent', () => {
+describe("GruposComponent", () => {
   let component: GruposComponent;
   let fixture: ComponentFixture<GruposComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GruposComponent ]
-    })
-    .compileComponents();
+      declarations: [GruposComponent],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            snapshot: {
+              data: {
+                data: {
+                  grupos: [{}]
+                }
+              }
+            }
+          }
+        }
+      ]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +33,7 @@ describe('GruposComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("Deve compilar", () => {
     expect(component).toBeTruthy();
   });
 });

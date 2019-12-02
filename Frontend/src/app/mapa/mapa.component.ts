@@ -27,28 +27,12 @@ export class MapaComponent implements OnInit {
   initialize() {
     // Create the map.
 
-    let outerbounds = [
-      { lat: 85, lng: 180 },
-      { lat: 85, lng: 90 },
-      { lat: 85, lng: 0 },
-      { lat: 85, lng: -90 },
-      { lat: 85, lng: -180 },
-      { lat: 0, lng: -180 },
-      { lat: -85, lng: -180 },
-      { lat: -85, lng: -90 },
-      { lat: -85, lng: 0 },
-      { lat: -85, lng: 90 },
-      { lat: -85, lng: 180 },
-      { lat: 0, lng: 180 },
-      { lat: 85, lng: 180 }
-    ];
-
-    this.fog = [outerbounds];
+    this.explored = [];
     for (let coordenada of this.usuario.coordenadas){
-      this.fog.push(this.drawCircle(coordenada, 0.1, -1));
+      this.explored.push(this.drawCircle(coordenada, 0.1, -1));
+
     }
 
-    this.explored = this.fog.slice(1);
 
   }
 
